@@ -105,6 +105,11 @@ h2 {
 
 }
 
+.work a:hover {
+    color: var(--red);
+    cursor: none;
+}
+
 .contact-container {
     display: flex;
     gap: 1rem;
