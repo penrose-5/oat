@@ -122,7 +122,9 @@ document.getElementById('no').addEventListener('click', function () {
 function showOfflineScreen() {
     setTimeout(() => {
         document.getElementById('offlineScreen').classList.add('visible');
-        cursorCircle.style.border = "1px dashed var(--white)";
+        document.getElementById('messageContainer').classList.add('hidden');
+        document.body.style.height = "auto";
+        document.body.style.overflow = "visible";
     }, 1000);
 }
 
