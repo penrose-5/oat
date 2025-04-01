@@ -15,6 +15,23 @@
 
 .offline-screen.visible {
     transform: translateY(0);
+    /* position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+
+@media (max-width: 768px) {
+    .offline-screen.visible {
+        min-height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: var(--white);
+        z-index: 1000;
+    } */
 }
 
 .main-container {
@@ -172,13 +189,6 @@ h2 {
 
 /* Tablet */
 @media (max-width: 768px) {
-    .offline-screen.visible {
-        position: relative;
-        height: auto;
-        min-height: 100vh;
-        overflow-y: auto;
-    }
-    
     body {
         cursor: auto; /* Use default cursor on mobile */
     }

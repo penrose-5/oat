@@ -94,11 +94,23 @@ const initializeMessageSystem = () => {
       const messageContainer = getElementById('messageContainer');
       
       if (offlineScreen) {
+        offlineScreen.classList.remove('hidden');
         offlineScreen.classList.add('visible');
       }
       
       if (messageContainer) {
+        // Ensure the message container is fully hidden
         messageContainer.classList.add('hidden');
+        // messageContainer.style.display = 'none';
+        
+        // Extra step for mobile where the flex display might override .hidden
+        if (isMobile()) {
+          messageContainer.style.position = 'absolute';
+          messageContainer.style.left = '-9999px';
+          messageContainer.style.height = '0';
+          messageContainer.style.opacity = '0';
+          messageContainer.style.pointerEvents = 'none';
+        }
       }
       
       document.body.style.height = "auto";
