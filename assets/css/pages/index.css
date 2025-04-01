@@ -71,7 +71,6 @@ body {
     justify-content: center;
 }
 
-
 .option:hover {
     /* background-color: black; */
     color: transparent;
@@ -95,4 +94,58 @@ a {
 
 .hidden {
     display: none;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    body {
+        font-size: 18px;
+        /* Allow scrolling on mobile for better UX */
+        overflow-y: auto;
+        height: auto;
+        min-height: 100vh;
+        cursor: auto; /* Use default cursor on mobile */
+    }
+    
+    .message-container {
+        height: auto;
+        min-height: 100vh;
+        padding-bottom: 60px; /* Ensure space at the bottom */
+    }
+    
+    .message {
+        padding: 20px;
+    }
+    
+    .message.visible {
+        position: relative;
+        bottom: auto;
+    }
+    
+    .option {
+        font-size: 50px;
+        padding: 10px;
+    }
+    
+    /* Make sure the message is visible on mobile */
+    .message.moved {
+        min-height: auto;
+        margin-bottom: 10px;
+    }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+    body {
+        font-size: 16px;
+    }
+    
+    .option {
+        font-size: 40px;
+        padding: 10px 5px;
+    }
+    
+    .message {
+        padding: 15px;
+    }
 }

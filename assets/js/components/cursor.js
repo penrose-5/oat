@@ -2,11 +2,15 @@
  * Custom cursor component
  */
 import { createElement } from '../utils/domUtils.js';
+import { isMobile } from '../utils/responsiveUtils.js';
 
 /**
  * Initialize custom cursor
  */
 const initializeCursor = () => {
+  // Skip cursor on mobile devices (using default cursor)
+  if (isMobile()) return;
+  
   // Create cursor elements
   const cursorDot = createElement('div', {
     styles: {

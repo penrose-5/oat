@@ -27,6 +27,14 @@ const initializeMessageSystem = () => {
   }
   
   /**
+   * Check if device is mobile
+   * @return {boolean} true if device is mobile
+   */
+  const isMobile = () => {
+    return window.innerWidth <= 768;
+  };
+  
+  /**
    * Show next message in sequence
    */
   const showNextMessage = () => {
@@ -68,6 +76,11 @@ const initializeMessageSystem = () => {
         newMsg.classList.add('moved');
         newMsg.style.position = 'relative';
         newMsg.style.transform = 'none';
+        
+        // On mobile, scroll to show the new message
+        if (isMobile()) {
+          newMsg.scrollIntoView({ behavior: 'smooth', block: 'end' });
+        }
       }, 100);
     }
   };
