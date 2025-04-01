@@ -109,3 +109,7 @@ typings/
 
 # Ignore all local history of files
 .history
+
+
+# Agents
+CLAUDE.md
