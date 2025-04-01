@@ -101,7 +101,7 @@ a {
     body {
         font-size: 18px;
         /* Allow scrolling on mobile for better UX */
-        overflow-y: auto;
+        /* overflow-y: auto; */
         height: auto;
         min-height: 100vh;
         cursor: auto; /* Use default cursor on mobile */
